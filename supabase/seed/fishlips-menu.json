@@ -1,0 +1,1863 @@
+{
+ "source": "https://fishlipssamford.com.au",
+ "categories": [
+  {
+   "name": "Samford Packs"
+  },
+  {
+   "name": "Fish Fillets"
+  },
+  {
+   "name": "Mains"
+  },
+  {
+   "name": "Seafood Packs"
+  },
+  {
+   "name": "Family Packs"
+  },
+  {
+   "name": "Fresh Salad"
+  },
+  {
+   "name": "Other Delights"
+  },
+  {
+   "name": "Burgers"
+  },
+  {
+   "name": "Sides"
+  },
+  {
+   "name": "Drinks"
+  },
+  {
+   "name": "Coffee"
+  },
+  {
+   "name": "Tea"
+  },
+  {
+   "name": "Iced Drinks"
+  },
+  {
+   "name": "Milkshake/Thick Shake"
+  },
+  {
+   "name": "Smoothies"
+  }
+ ],
+ "groups": [
+  {
+   "name": "Fish",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "Cod",
+     "price": 0
+    },
+    {
+     "name": "Snapper",
+     "price": 0
+    }
+   ]
+  },
+  {
+   "name": "390ml drink",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "390ml Coke",
+     "price": 0
+    },
+    {
+     "name": "390ml Coke No Sugar",
+     "price": 0
+    }
+   ]
+  },
+  {
+   "name": "1.25L drink",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "1.25l Coke",
+     "price": 0
+    },
+    {
+     "name": "1.25l Coke No Sugar",
+     "price": 0
+    }
+   ]
+  },
+  {
+   "name": "Cook option",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "Crumbed",
+     "price": 0.0
+    },
+    {
+     "name": "Battered",
+     "price": 0.0
+    },
+    {
+     "name": "Grilled",
+     "price": 0.0
+    }
+   ]
+  },
+  {
+   "name": "Salt / lemon",
+   "min": 0,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "No lemon",
+     "price": 0.0
+    },
+    {
+     "name": "Extra Salt",
+     "price": 0.0
+    },
+    {
+     "name": "Lemon",
+     "price": 0.0
+    },
+    {
+     "name": "No salt",
+     "price": 0.0
+    },
+    {
+     "name": "Chicken Salt",
+     "price": 0.0
+    }
+   ]
+  },
+  {
+   "name": "Salad",
+   "min": 0,
+   "max": 2,
+   "repeat": false,
+   "options": [
+    {
+     "name": "Seafood Salad",
+     "price": 0.0
+    },
+    {
+     "name": "Coleslaw Salad",
+     "price": 0.0
+    },
+    {
+     "name": "Garden Salad",
+     "price": 0.0
+    },
+    {
+     "name": "Greek Salad",
+     "price": 0.0
+    }
+   ]
+  },
+  {
+   "name": "Kids burger",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "Beef Patty",
+     "price": 2.0
+    },
+    {
+     "name": "Crumbed Chicken",
+     "price": 2.0
+    }
+   ]
+  },
+  {
+   "name": "Powerade flavour",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "Blue",
+     "price": 0.0
+    },
+    {
+     "name": "Orange",
+     "price": 0.0
+    },
+    {
+     "name": "Red",
+     "price": 0.0
+    }
+   ]
+  },
+  {
+   "name": "Fuse Ice Tea flavour",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "Peach",
+     "price": 0.0
+    },
+    {
+     "name": "Lemon",
+     "price": 0.0
+    },
+    {
+     "name": "Mango",
+     "price": 0.0
+    }
+   ]
+  },
+  {
+   "name": "Crows Nest flavour",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "Double Sars",
+     "price": 0.0
+    },
+    {
+     "name": "Creaming Soda",
+     "price": 0.0
+    },
+    {
+     "name": "Lemon Lime Bitter",
+     "price": 0.0
+    }
+   ]
+  },
+  {
+   "name": "Coffee",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "Cappuccino",
+     "price": 0.0
+    },
+    {
+     "name": "Flat White",
+     "price": 0.0
+    },
+    {
+     "name": "Latte",
+     "price": 0.0
+    },
+    {
+     "name": "Long Black",
+     "price": 0.0
+    },
+    {
+     "name": "Hot Chocolate",
+     "price": 0.0
+    },
+    {
+     "name": "Chai Latte",
+     "price": 0.0
+    },
+    {
+     "name": "Mocha",
+     "price": 0.0
+    }
+   ]
+  },
+  {
+   "name": "Shake flavour",
+   "min": 1,
+   "max": 1,
+   "repeat": false,
+   "options": [
+    {
+     "name": "Chocolate",
+     "price": 0.0
+    },
+    {
+     "name": "Strawberry",
+     "price": 0.0
+    },
+    {
+     "name": "Vanilla",
+     "price": 0.0
+    },
+    {
+     "name": "Caramel",
+     "price": 0.0
+    },
+    {
+     "name": "Coffee",
+     "price": 0.0
+    },
+    {
+     "name": "Lime",
+     "price": 0.0
+    },
+    {
+     "name": "Banana",
+     "price": 0.0
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "category": "Samford Packs",
+   "name": "Samford Small Pack",
+   "plu": "SSP1",
+   "description": "1 Fish( Cod or Snapper), 3 Calamari, Min Chips and 1 Drink 390ml",
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/thumbs/fishlips_cod_calamari_coke_small.webp",
+   "price": 24.7,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Fish"
+    },
+    {
+     "name": "390ml drink"
+    }
+   ]
+  },
+  {
+   "category": "Samford Packs",
+   "name": "Samford Medium Pack",
+   "plu": "SMP1",
+   "description": "2 Fish( Cod or Snapper), 6 Calamari, $8 Chips and 2 Drinks 390ml",
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/thumbs/fishlips_2_fish_6_natural_crumbed_calamari_2_coke.webp",
+   "price": 44.7,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Fish",
+     "min": 2,
+     "max": 2,
+     "repeat": true
+    },
+    {
+     "name": "390ml drink",
+     "min": 2,
+     "max": 2,
+     "repeat": true
+    }
+   ]
+  },
+  {
+   "category": "Samford Packs",
+   "name": "Samford Large Pack",
+   "plu": "SLP1",
+   "description": "3 Fish( Cod or Snapper), 8 Calamari, $10 Chips and 1 Drinks 1.25L",
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/thumbs/fishlips_3_fish_8_calamari_600ml_coke_mount_franklin.webp",
+   "price": 57.7,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Fish",
+     "min": 3,
+     "max": 3,
+     "repeat": true
+    },
+    {
+     "name": "1.25L drink"
+    }
+   ]
+  },
+  {
+   "category": "Samford Packs",
+   "name": "Samford XL Pack",
+   "plu": "SXLP",
+   "description": "4 Fish( Cod or Snapper), 8 Calamari, $15 Chips and 1 Drink 1.25L",
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/thumbs/fishlips_4_fish_8_calamari_15_chips_125l_coke_small.webp",
+   "price": 69.7,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Fish",
+     "min": 4,
+     "max": 4,
+     "repeat": true
+    },
+    {
+     "name": "1.25L drink"
+    }
+   ]
+  },
+  {
+   "category": "Fish Fillets",
+   "name": "Cod",
+   "plu": "FF01",
+   "description": null,
+   "image_url": null,
+   "price": 12.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    }
+   ]
+  },
+  {
+   "category": "Fish Fillets",
+   "name": "Flake",
+   "plu": "FF02",
+   "description": null,
+   "image_url": null,
+   "price": 12.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    }
+   ]
+  },
+  {
+   "category": "Fish Fillets",
+   "name": "Snapper",
+   "plu": "FF03",
+   "description": null,
+   "image_url": null,
+   "price": 13.8,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    }
+   ]
+  },
+  {
+   "category": "Fish Fillets",
+   "name": "Sweet Lip",
+   "plu": "FF04",
+   "description": null,
+   "image_url": null,
+   "price": 13.8,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    }
+   ]
+  },
+  {
+   "category": "Fish Fillets",
+   "name": "Barramundi",
+   "plu": "FF05",
+   "description": null,
+   "image_url": null,
+   "price": 14.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    }
+   ]
+  },
+  {
+   "category": "Fish Fillets",
+   "name": "Coral Trout",
+   "plu": "FF07",
+   "description": null,
+   "image_url": null,
+   "price": 14.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    }
+   ]
+  },
+  {
+   "category": "Fish Fillets",
+   "name": "Atlantic Salmon",
+   "plu": "FF08",
+   "description": null,
+   "image_url": null,
+   "price": 17.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    }
+   ]
+  },
+  {
+   "category": "Fish Fillets",
+   "name": "Whiting",
+   "plu": "FF09",
+   "description": null,
+   "image_url": null,
+   "price": 5.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Atlantic Salmon",
+   "plu": "MA08",
+   "description": null,
+   "image_url": null,
+   "price": 31.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Baby Octopus",
+   "plu": "MA15",
+   "description": null,
+   "image_url": null,
+   "price": 24.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Barramundi",
+   "plu": "MA05",
+   "description": null,
+   "image_url": null,
+   "price": 27.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Calamari",
+   "plu": "MA16",
+   "description": null,
+   "image_url": null,
+   "price": 25.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Cod",
+   "plu": "MA01",
+   "description": null,
+   "image_url": null,
+   "price": 24.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Coral Trout",
+   "plu": "MA07",
+   "description": null,
+   "image_url": null,
+   "price": 26.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Flake",
+   "plu": "MA02",
+   "description": null,
+   "image_url": null,
+   "price": 24.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Oyster",
+   "plu": "MA14",
+   "description": null,
+   "image_url": null,
+   "price": 26.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Prawn Cutlet",
+   "plu": "MA13",
+   "description": null,
+   "image_url": null,
+   "price": 28.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Red Emperor",
+   "plu": "MA11",
+   "description": null,
+   "image_url": null,
+   "price": 27.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Sea Scallop",
+   "plu": "MA12",
+   "description": null,
+   "image_url": null,
+   "price": 27.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Snapper",
+   "plu": "MA03",
+   "description": null,
+   "image_url": null,
+   "price": 26.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Sweet Lip",
+   "plu": "MA04",
+   "description": null,
+   "image_url": null,
+   "price": 26.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Mains",
+   "name": "Whiting",
+   "plu": "MA09",
+   "description": null,
+   "image_url": null,
+   "price": 24.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option"
+    },
+    {
+     "name": "Salt / lemon"
+    },
+    {
+     "name": "Salad"
+    }
+   ]
+  },
+  {
+   "category": "Seafood Packs",
+   "name": "Flathead Pack",
+   "plu": "SP03",
+   "description": "3 Battered Flathead Fillets, 3 Calamari Rings, 1 Prawn Cutlet, Chips",
+   "image_url": null,
+   "price": 21.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Salt / lemon",
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  {
+   "category": "Seafood Packs",
+   "name": "Large Whiting Pack",
+   "plu": "SP02",
+   "description": "4 Whitings, 6 Calamari Rings, 2 Prawn Cutlets, 3 Seafood Sticks, Chips",
+   "image_url": null,
+   "price": 32.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Salt / lemon",
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  {
+   "category": "Seafood Packs",
+   "name": "Shellfish Pack",
+   "plu": "SP04",
+   "description": "2 Prawn Cutlets, 6 Calamari Rings, 2 Sea Scallops, 2 Seafood Sticks, Chips",
+   "image_url": null,
+   "price": 27.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Salt / lemon",
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  {
+   "category": "Seafood Packs",
+   "name": "Small Whiting Pack",
+   "plu": "SP01",
+   "description": "2 Whitings, 3 Calamari Rings, 1 Prawn  Cutlet, Chips",
+   "image_url": null,
+   "price": 17.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Salt / lemon",
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  {
+   "category": "Seafood Packs",
+   "name": "Basket for One",
+   "plu": "SP05",
+   "description": "3 Fish Pieces, 4 Calamari Rings, 2 Prawn Cutlets, 1 Sea Scallop, Chips",
+   "image_url": null,
+   "price": 25.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Salt / lemon",
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  {
+   "category": "Seafood Packs",
+   "name": "Seafood Platter for Two",
+   "plu": "SP06",
+   "description": "2 Cod Fillets, 2 Prawn Cutlets, 12 Calamari Rings, 2 Sea Scallops, Seafood Bites,\r\nSeafood Sticks, Chips, 2 Large Salads",
+   "image_url": null,
+   "price": 63.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Salad"
+    },
+    {
+     "name": "Salt / lemon",
+     "min": 1,
+     "max": 1
+    }
+   ]
+  },
+  {
+   "category": "Family Packs",
+   "name": "Family Feast for Four",
+   "plu": "FP01",
+   "description": "4 Cod, 4 Potato Scallops, 8 Calamari Rings, Chips",
+   "image_url": null,
+   "price": 60.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option",
+     "min": 4,
+     "max": 4,
+     "repeat": true
+    }
+   ]
+  },
+  {
+   "category": "Family Packs",
+   "name": "6 Piece Fish and Chips",
+   "plu": "FP02",
+   "description": "6 Cod, Chips, Small Coleslaw, Lemon",
+   "image_url": null,
+   "price": 63.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option",
+     "min": 6,
+     "max": 6,
+     "repeat": true
+    }
+   ]
+  },
+  {
+   "category": "Family Packs",
+   "name": "9 Piece Fish and Chips",
+   "plu": "FP03",
+   "description": "9 Cod, Chips, Large Coleslaw, Lemon",
+   "image_url": null,
+   "price": 75.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option",
+     "min": 9,
+     "max": 9,
+     "repeat": true
+    }
+   ]
+  },
+  {
+   "category": "Family Packs",
+   "name": "12 Piece Fish and Chips",
+   "plu": "FP04",
+   "description": "12 Cod, Chips, Large Coleslaw, Lemon",
+   "image_url": null,
+   "price": 89.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Cook option",
+     "min": 12,
+     "max": 12,
+     "repeat": true
+    }
+   ]
+  },
+  {
+   "category": "Fresh Salad",
+   "name": "Greek Salad",
+   "plu": null,
+   "description": null,
+   "image_url": null,
+   "price": null,
+   "sizes": [
+    {
+     "name": "Small",
+     "price": 7.5,
+     "plu": "FS01"
+    },
+    {
+     "name": "Large",
+     "price": 9.5,
+     "plu": "FS02"
+    }
+   ],
+   "groups": []
+  },
+  {
+   "category": "Fresh Salad",
+   "name": "Garden Salad",
+   "plu": null,
+   "description": null,
+   "image_url": null,
+   "price": null,
+   "sizes": [
+    {
+     "name": "Small",
+     "price": 7.5,
+     "plu": "FS03"
+    },
+    {
+     "name": "Large",
+     "price": 9.5,
+     "plu": "FS04"
+    }
+   ],
+   "groups": []
+  },
+  {
+   "category": "Fresh Salad",
+   "name": "Coleslaw",
+   "plu": null,
+   "description": null,
+   "image_url": null,
+   "price": null,
+   "sizes": [
+    {
+     "name": "Small",
+     "price": 7.5,
+     "plu": "FS05"
+    },
+    {
+     "name": "Large",
+     "price": 9.5,
+     "plu": "FS06"
+    }
+   ],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Chips Min",
+   "plu": "OD01",
+   "description": null,
+   "image_url": null,
+   "price": 5.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Potato Scallop",
+   "plu": "OD02",
+   "description": null,
+   "image_url": null,
+   "price": 3.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Pineapple Fritter",
+   "plu": "OD03",
+   "description": null,
+   "image_url": null,
+   "price": 3.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Spring Roll Large",
+   "plu": "OD04",
+   "description": null,
+   "image_url": null,
+   "price": 5.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Crumbed Sausage",
+   "plu": "OD05",
+   "description": null,
+   "image_url": null,
+   "price": 5.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Chicko Roll",
+   "plu": "OD06",
+   "description": null,
+   "image_url": null,
+   "price": 5.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Dim Sim Small",
+   "plu": "OD07",
+   "description": null,
+   "image_url": null,
+   "price": 2.7,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Dim Sim Large",
+   "plu": "OD08",
+   "description": null,
+   "image_url": null,
+   "price": 5.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Kabana",
+   "plu": "OD09",
+   "description": null,
+   "image_url": null,
+   "price": 5.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Battered Sav",
+   "plu": "OD10",
+   "description": null,
+   "image_url": null,
+   "price": 5.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Fish Cake",
+   "plu": "OD11",
+   "description": null,
+   "image_url": null,
+   "price": 5.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Seafood Bite",
+   "plu": "OD12",
+   "description": null,
+   "image_url": null,
+   "price": 2.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Seafood Stick",
+   "plu": "OD13",
+   "description": null,
+   "image_url": null,
+   "price": 3.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Sea Scallop",
+   "plu": "OD14",
+   "description": null,
+   "image_url": null,
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Prawn Cutlet",
+   "plu": "OD15",
+   "description": null,
+   "image_url": null,
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Cocktail Fish & Chips",
+   "plu": "OD16",
+   "description": null,
+   "image_url": null,
+   "price": 14.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Chicken Nuggets & Chips",
+   "plu": "OD17",
+   "description": null,
+   "image_url": null,
+   "price": 12.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Calamari (4) & Chips",
+   "plu": "OD18",
+   "description": null,
+   "image_url": null,
+   "price": 12.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Calamari Rings (6)",
+   "plu": "OD19",
+   "description": null,
+   "image_url": null,
+   "price": 9.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Other Delights",
+   "name": "Baby Octopus (6)",
+   "plu": "OD20",
+   "description": null,
+   "image_url": null,
+   "price": 8.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Chicken Burger",
+   "plu": "BG01",
+   "description": "Crumbed Chicken, Lettuce, Tomato, Cucumber, Herbed Aioli",
+   "image_url": null,
+   "price": 15.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Beef Burger",
+   "plu": "BG02",
+   "description": "Beef Patty, Lettuce, Tomato, Cucumber, BBQ Sauce",
+   "image_url": null,
+   "price": 15.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Fish Burger",
+   "plu": "BG03",
+   "description": "Crumbed Cod, Lettuce, Tomato, Cucumber, Tartare Sauce",
+   "image_url": null,
+   "price": 15.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Calamari Burger",
+   "plu": "BG04",
+   "description": "Crumbed Calamari, Lettuce, Tomato, Cucumber, Tartare Sauce",
+   "image_url": null,
+   "price": 15.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Veggie Burger",
+   "plu": "BG05",
+   "description": "Veggie Patty, Lettuce, Tomato, Cucumber, Beetroot, Sweet Chilli Sauce",
+   "image_url": null,
+   "price": 15.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Bacon & Egg",
+   "plu": "BG06",
+   "description": "Bacon, Egg, Lettuce, Tomato, Cucumber, BBQ Sauce",
+   "image_url": null,
+   "price": 15.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Works Burger",
+   "plu": "BG07",
+   "description": "Add Bacon, Cheese, Egg, Pineapple",
+   "image_url": null,
+   "price": 18.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Steak Burger/Sandwich",
+   "plu": null,
+   "description": "Rib Fillet, Lettuce, Tomato, Cucumber, Beetroot, Caramelised Onion, BBQ Sauce",
+   "image_url": null,
+   "price": null,
+   "sizes": [
+    {
+     "name": "Burger",
+     "price": 17.0,
+     "plu": "BG08"
+    },
+    {
+     "name": "Sandwich",
+     "price": 17.0,
+     "plu": "BG09"
+    }
+   ],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Steak Works",
+   "plu": "BG11",
+   "description": null,
+   "image_url": null,
+   "price": 19.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Burgers",
+   "name": "Kids Burger",
+   "plu": "BG10",
+   "description": "Beef Patty Or Crumbed Chicken, Cheese, Tomato Sauce",
+   "image_url": null,
+   "price": 10.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Kids burger"
+    }
+   ]
+  },
+  {
+   "category": "Sides",
+   "name": "Bacon",
+   "plu": "SD01",
+   "description": null,
+   "image_url": null,
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Avocado",
+   "plu": "SD02",
+   "description": null,
+   "image_url": null,
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Haloumi",
+   "plu": "SD03",
+   "description": null,
+   "image_url": null,
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Smoked Salmon",
+   "plu": "SD04",
+   "description": null,
+   "image_url": null,
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Spinach",
+   "plu": "SD05",
+   "description": null,
+   "image_url": null,
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Chipolatas",
+   "plu": "SD06",
+   "description": null,
+   "image_url": null,
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Mushrooms",
+   "plu": "SD07",
+   "description": null,
+   "image_url": null,
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Tomato",
+   "plu": "SD08",
+   "description": null,
+   "image_url": null,
+   "price": 4.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Hollandaise",
+   "plu": "SD09",
+   "description": null,
+   "image_url": null,
+   "price": 4.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Baked Beans",
+   "plu": "SD10",
+   "description": null,
+   "image_url": null,
+   "price": 4.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Poached Egg",
+   "plu": "SD11",
+   "description": null,
+   "image_url": null,
+   "price": 3.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Sides",
+   "name": "Fried Egg",
+   "plu": "SD12",
+   "description": null,
+   "image_url": null,
+   "price": 3.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Drinks",
+   "name": "Cans",
+   "plu": null,
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/can_drinks.png",
+   "price": null,
+   "sizes": [
+    {
+     "name": "Coke",
+     "price": 3.5,
+     "plu": "DR01"
+    },
+    {
+     "name": "Creaming Soda",
+     "price": 3.5,
+     "plu": "DR04"
+    },
+    {
+     "name": "Pasito",
+     "price": 3.5,
+     "plu": "DR03"
+    },
+    {
+     "name": "Coke Zero Sugar",
+     "price": 3.5,
+     "plu": "DR02"
+    }
+   ],
+   "groups": []
+  },
+  {
+   "category": "Drinks",
+   "name": "390ml",
+   "plu": null,
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/390ml.png",
+   "price": null,
+   "sizes": [
+    {
+     "name": "Coke Zero Sugar",
+     "price": 4.5,
+     "plu": "DR06"
+    },
+    {
+     "name": "Coke",
+     "price": 4.5,
+     "plu": "DR05"
+    }
+   ],
+   "groups": []
+  },
+  {
+   "category": "Drinks",
+   "name": "600ml",
+   "plu": null,
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/600ml_Drinks.png",
+   "price": null,
+   "sizes": [
+    {
+     "name": "Fanta",
+     "price": 5.5,
+     "plu": "DR12"
+    },
+    {
+     "name": "Sprite",
+     "price": 5.5,
+     "plu": "DR11"
+    },
+    {
+     "name": "Vanilla Coke",
+     "price": 5.5,
+     "plu": "DR10"
+    },
+    {
+     "name": "Coke No Sugar",
+     "price": 5.5,
+     "plu": "DR08"
+    },
+    {
+     "name": "Diet Coke",
+     "price": 5.5,
+     "plu": "DR09"
+    },
+    {
+     "name": "Coke",
+     "price": 5.5,
+     "plu": "DR07"
+    }
+   ],
+   "groups": []
+  },
+  {
+   "category": "Drinks",
+   "name": "600ml Mount Franklin Water",
+   "plu": "DR13",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Mount_Franklin_Sparkling.png",
+   "price": 4.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Drinks",
+   "name": "Powerade",
+   "plu": "DR14",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Powerade.png",
+   "price": 4.5,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Powerade flavour"
+    }
+   ]
+  },
+  {
+   "category": "Drinks",
+   "name": "1.25L",
+   "plu": null,
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/1.25L_drinks.png",
+   "price": null,
+   "sizes": [
+    {
+     "name": "Coke No Sugar",
+     "price": 6.0,
+     "plu": "DR16"
+    },
+    {
+     "name": "Pasito",
+     "price": 6.0,
+     "plu": "DR17"
+    },
+    {
+     "name": "Creaming Soda",
+     "price": 6.0,
+     "plu": "DR18"
+    },
+    {
+     "name": "Coke",
+     "price": 6.0,
+     "plu": "DR15"
+    }
+   ],
+   "groups": []
+  },
+  {
+   "category": "Drinks",
+   "name": "Fuse Ice Tea",
+   "plu": "DR19",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Fuse_Ice_Tea.png",
+   "price": 5.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Fuse Ice Tea flavour"
+    }
+   ]
+  },
+  {
+   "category": "Drinks",
+   "name": "Crows Nest",
+   "plu": "DR20",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Crows_Nest.png",
+   "price": 5.0,
+   "sizes": [],
+   "groups": [
+    {
+     "name": "Crows Nest flavour"
+    }
+   ]
+  },
+  {
+   "category": "Drinks",
+   "name": "Bundaberg Ginger Beer",
+   "plu": "DR21",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Bundaberg_Ginger_Beer.jpg",
+   "price": 5.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Coffee",
+   "name": "Coffee",
+   "plu": null,
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Cup_Coffee.png",
+   "price": null,
+   "sizes": [
+    {
+     "name": "Small",
+     "price": 5.0,
+     "plu": "COF09"
+    },
+    {
+     "name": "Regular",
+     "price": 6.5,
+     "plu": "COF10"
+    },
+    {
+     "name": "Large",
+     "price": 7.0,
+     "plu": "COF11"
+    }
+   ],
+   "groups": [
+    {
+     "name": "Coffee"
+    }
+   ]
+  },
+  {
+   "category": "Coffee",
+   "name": "Short Black",
+   "plu": "COF03",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Short_Black.png",
+   "price": 4.2,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Coffee",
+   "name": "Babyccino",
+   "plu": "COF04",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Babyccino.png",
+   "price": 1.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Tea",
+   "name": "English Breakfast Tea",
+   "plu": "TEA01",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/English_Breakfast_Tea.png",
+   "price": 4.4,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Tea",
+   "name": "Earl Grey Tea",
+   "plu": "TEA02",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Earl_Grey_Tea.png",
+   "price": 4.4,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Tea",
+   "name": "Green Tea",
+   "plu": "TEA03",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Green_Tea.png",
+   "price": 4.4,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Iced Drinks",
+   "name": "Iced Coffee",
+   "plu": "COF05",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Iced_Coffee.png",
+   "price": 8.2,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Iced Drinks",
+   "name": "Iced Latte",
+   "plu": "COF06",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Iced_Latte.png",
+   "price": 7.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Iced Drinks",
+   "name": "Iced Chocolate",
+   "plu": "COF07",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Iced_Chocolate.png",
+   "price": 7.5,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Iced Drinks",
+   "name": "Iced Mocha",
+   "plu": "COF08",
+   "description": null,
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Iced_Mocha.png",
+   "price": 8.2,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Milkshake/Thick Shake",
+   "name": "Milkshakes",
+   "plu": null,
+   "description": "Chocolate, Strawberry, Vanilla, Caramel, Coffee, Lime, Banana",
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Milkshake.png",
+   "price": null,
+   "sizes": [
+    {
+     "name": "Small",
+     "price": 7.0,
+     "plu": "SH01"
+    },
+    {
+     "name": "Large",
+     "price": 8.0,
+     "plu": "SH02"
+    }
+   ],
+   "groups": [
+    {
+     "name": "Shake flavour"
+    }
+   ]
+  },
+  {
+   "category": "Milkshake/Thick Shake",
+   "name": "Thick Shakes",
+   "plu": null,
+   "description": "Chocolate, Strawberry, Vanilla, Caramel, Coffee, Lime, Banana",
+   "image_url": "https://d2ova09jg8x3xk.cloudfront.net/fishlipssamford.com.au/uploads/Thickshake.png",
+   "price": null,
+   "sizes": [
+    {
+     "name": "Small",
+     "price": 8.0,
+     "plu": "SH03"
+    },
+    {
+     "name": "Large",
+     "price": 9.5,
+     "plu": "SH04"
+    }
+   ],
+   "groups": [
+    {
+     "name": "Shake flavour"
+    }
+   ]
+  },
+  {
+   "category": "Smoothies",
+   "name": "Detox",
+   "plu": "SM01",
+   "description": "Blueberries, Banana, Dates, Boysenberries",
+   "image_url": null,
+   "price": 9.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Smoothies",
+   "name": "Reboot",
+   "plu": "SM02",
+   "description": "Mango, Pineapple, Banana, Passionfruit",
+   "image_url": null,
+   "price": 9.0,
+   "sizes": [],
+   "groups": []
+  },
+  {
+   "category": "Smoothies",
+   "name": "Energise",
+   "plu": "SM03",
+   "description": "Strawberries, Apple, Pear, Pineapple, Dates",
+   "image_url": null,
+   "price": 9.0,
+   "sizes": [],
+   "groups": []
+  }
+ ]
+}
