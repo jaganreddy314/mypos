@@ -6,7 +6,7 @@ import { useSession } from './hooks'
 import { supabase } from '../lib/supabase'
 import { saveSettings } from '../lib/settings'
 import { refreshMenu } from '../lib/sync'
-import { Notice } from './ui'
+import { BusinessTile, Notice } from './ui'
 
 export function Setup() {
   const session = useSession()
@@ -47,8 +47,8 @@ export function SignInForm({ email: fixed }: { email?: string }) {
         onChange={(e) => setEmail(e.target.value)} readOnly={!!fixed} required />
       <input className="field" type="password" autoComplete="current-password" placeholder="Password" value={password}
         onChange={(e) => setPassword(e.target.value)} required />
-      {error && <p className="text-[13px] text-accent-800">{error}</p>}
-      <button className="btn btn-accent min-h-[52px] text-[17px]" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
+      {error && <div role="alert" className="rounded-lg border border-bad/40 bg-bad/10 px-3 py-2 text-sm text-bad">{error}</div>}
+      <button className="btn btn-primary btn-lg" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
     </form>
   )
 }
@@ -105,15 +105,16 @@ function ChooseBusiness({ session }: { session: Session }) {
       )}
       <div className="mt-4 flex flex-col gap-2">
         {places?.map((p) => (
-          <button key={p.business_id} className="btn btn-accent min-h-[56px] justify-between px-5 text-[18px]"
+          <button key={p.business_id} type="button" className="btn btn-lg justify-start gap-3 text-ink"
             disabled={!!busy} onClick={() => pick(p)}>
-            <span>{p.businesses?.name}</span>
-            <span className="font-body text-[12px] font-normal">{busy === p.business_id ? 'Loading the menu…' : 'Use this till ›'}</span>
+            <BusinessTile name={p.businesses?.name} size={32} />
+            <span className="flex-1 text-left">{p.businesses?.name}</span>
+            <span className="text-sm font-medium text-accent">{busy === p.business_id ? 'Loading the menu…' : 'Use this till ›'}</span>
           </button>
         ))}
       </div>
-      {error && <p className="mt-3 text-[13px] text-accent-800">{error}</p>}
-      <button className="btn btn-quiet mt-5 min-h-[44px] w-full text-[15px]" onClick={() => supabase.auth.signOut()}>
+      {error && <div role="alert" className="mt-3 rounded-lg border border-bad/40 bg-bad/10 px-3 py-2 text-sm text-bad">{error}</div>}
+      <button type="button" className="btn mt-5 min-h-11 w-full" onClick={() => supabase.auth.signOut()}>
         Sign in as someone else
       </button>
     </Notice>

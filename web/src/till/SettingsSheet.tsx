@@ -9,7 +9,10 @@ import { saveSettings, updateSettings, type Settings } from '../lib/settings'
 import { supabase } from '../lib/supabase'
 import { pushOrders, refreshMenu, type SyncStatus } from '../lib/sync'
 import { useSession } from './hooks'
+import { GLYPH } from './glyphs'
+import { Icon } from './icons'
 import { SignInForm } from './Setup'
+import { Dialog } from './ui'
 
 export function SettingsSheet({ settings, sync, menu, onClose }: {
   settings: Settings
@@ -44,68 +47,69 @@ export function SettingsSheet({ settings, sync, menu, onClose }: {
   }
 
   return (
-    <div className="absolute inset-0 z-50 flex animate-fade items-start justify-center bg-[color-mix(in_srgb,#201f1d_40%,transparent)] py-12" onClick={onClose}>
-      <div className="pos-scroll max-h-full w-[520px] animate-slide rounded-lg border border-divider bg-bg p-7 shadow-lg" onClick={(e) => e.stopPropagation()}>
-        <div className="kicker">{settings.businessName}</div>
-        <h2 className="mt-1 text-[27px] font-medium">Till settings</h2>
-
-        <Section title="This iPad">
-          <label className="block text-[13px] text-neutral-700">Name on dockets and orders
-            <input className="field mt-1" value={device} onChange={(e) => setDevice(e.target.value)} />
-          </label>
-          <label className="mt-3 block text-[13px] text-neutral-700">Card surcharge %
-            <input className="field mt-1" inputMode="decimal" value={surcharge} onChange={(e) => setSurcharge(e.target.value)} />
-            <span className="mt-1 block text-[12px]">Leave at 0 if the Tyro terminal adds the surcharge itself, so it isn’t charged twice.</span>
-          </label>
-        </Section>
-
-        <Section title="Menu">
-          <p className="text-[13px] text-neutral-700">
-            {items} items, loaded {clockTime(menu.takenAt)} on {new Date(menu.takenAt).toLocaleDateString('en-AU')}. Prices are changed in the store app, under Food → Menu.
-          </p>
-          <div className="mt-2 flex items-center gap-3">
-            <button className="btn min-h-11 px-4 text-[15px]" onClick={reloadMenu}>Load the latest menu</button>
-            <span className="text-[13px] text-neutral-700">{menuNote}</span>
-          </div>
-        </Section>
-
-        <Section title="Sending orders">
-          <p className="text-[13px] text-neutral-700">
-            {sync.waiting ? `${sync.waiting} order${sync.waiting === 1 ? '' : 's'} saved on this iPad, not sent yet.` : 'Every order has been sent.'}
-            {sync.status === 'offline' && ' There’s no connection; they’ll go when it’s back.'}
-          </p>
-          {unsent.filter((o) => o.error).map((o) => (
-            <p key={o.id} className="mt-1 text-[13px] text-accent-800">#{o.number}: {o.error}</p>
-          ))}
-          {sync.waiting > 0 && session && (
-            <button className="btn mt-2 min-h-11 px-4 text-[15px]" onClick={() => void pushOrders()}>Send now</button>
-          )}
-          {session === null && (
-            <>
-              <p className="mt-2 text-[13px] text-neutral-700">Nobody is signed in, so orders can’t be sent. Sign in to send them.</p>
-              <SignInForm />
-            </>
-          )}
-          {session && <p className="mt-2 text-[12px] text-neutral-700">Signed in as {session.user.email}</p>}
-        </Section>
-
-        <div className="mt-6 grid grid-cols-2 gap-2">
-          <button className="btn btn-quiet min-h-12 text-[15px]" disabled={sync.waiting > 0}
-            title={sync.waiting ? 'Send every order first' : undefined}
-            onClick={async () => { await supabase.auth.signOut(); saveSettings(null) }}>
-            Sign out of this till
-          </button>
-          <button className="btn btn-accent min-h-12 text-[15px]" onClick={save}>Done</button>
+    <Dialog onClose={onClose} width={520}>
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <div className="text-xs font-medium uppercase tracking-[0.04em] text-faint">{settings.businessName}</div>
+          <h1 className="mt-1 text-xl font-semibold">Till settings</h1>
         </div>
+        <button type="button" className="btn btn-icon rounded-[10px]" onClick={onClose} aria-label="Close"><Icon size={20} stroke={2}>{GLYPH.x}</Icon></button>
       </div>
-    </div>
+
+      <Section title="This iPad">
+        <label className="label" htmlFor="device">Name on dockets and orders</label>
+        <input id="device" className="field" value={device} onChange={(e) => setDevice(e.target.value)} />
+        <label className="label mt-3" htmlFor="surcharge">Card surcharge %</label>
+        <input id="surcharge" className="field" inputMode="decimal" value={surcharge} onChange={(e) => setSurcharge(e.target.value)} />
+        <p className="mt-1.5 text-xs text-muted">Leave at 0 if the Tyro terminal adds the surcharge itself, so it isn’t charged twice.</p>
+      </Section>
+
+      <Section title="Menu">
+        <p className="text-sm text-ink-2">
+          {items} items, loaded {clockTime(menu.takenAt)} on {new Date(menu.takenAt).toLocaleDateString('en-AU')}. Prices are changed in the store app, under Food → Menu.
+        </p>
+        <div className="mt-2.5 flex items-center gap-3">
+          <button type="button" className="btn min-h-11" onClick={reloadMenu}>Load the latest menu</button>
+          <span className="text-sm text-muted">{menuNote}</span>
+        </div>
+      </Section>
+
+      <Section title="Sending orders">
+        <p className="text-sm text-ink-2">
+          {sync.waiting ? `${sync.waiting} order${sync.waiting === 1 ? '' : 's'} saved on this iPad, not sent yet.` : 'Every order has been sent.'}
+          {sync.status === 'offline' && ' There’s no connection; they’ll go when it’s back.'}
+        </p>
+        {unsent.filter((o) => o.error).map((o) => (
+          <div key={o.id} role="alert" className="mt-2 rounded-lg border border-bad/40 bg-bad/10 px-3 py-2 text-sm text-bad">#{o.number}: {o.error}</div>
+        ))}
+        {sync.waiting > 0 && session && (
+          <button type="button" className="btn mt-2.5 min-h-11" onClick={() => void pushOrders()}>Send now</button>
+        )}
+        {session === null && (
+          <>
+            <p className="mt-2 text-sm text-ink-2">Nobody is signed in, so orders can’t be sent. Sign in to send them.</p>
+            <SignInForm />
+          </>
+        )}
+        {session && <p className="mt-2 text-xs text-muted">Signed in as {session.user.email}</p>}
+      </Section>
+
+      <div className="mt-6 grid grid-cols-2 gap-2">
+        <button type="button" className="btn btn-danger btn-lg" disabled={sync.waiting > 0}
+          title={sync.waiting ? 'Send every order first' : undefined}
+          onClick={async () => { await supabase.auth.signOut(); saveSettings(null) }}>
+          Sign out of this till
+        </button>
+        <button type="button" className="btn btn-primary btn-lg" onClick={save}>Done</button>
+      </div>
+    </Dialog>
   )
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mt-5">
-      <div className="border-b border-divider pb-1.5 font-heading text-[18px] font-semibold">{title}</div>
+      <h2 className="border-b border-line pb-2 text-[15px] font-semibold">{title}</h2>
       <div className="mt-3">{children}</div>
     </div>
   )

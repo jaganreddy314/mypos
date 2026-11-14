@@ -35,3 +35,16 @@ export function useSession() {
   }, [])
   return session
 }
+
+/** Light or dark, as the store app does: the device setting until someone picks one here. */
+export function useTheme() {
+  const [theme, setTheme] = useState(() => document.documentElement.dataset.theme ?? '')
+  const isDark = theme ? theme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches
+  const toggle = () => {
+    const next = isDark ? 'light' : 'dark'
+    document.documentElement.dataset.theme = next
+    try { localStorage.setItem('theme', next) } catch { /* private mode */ }
+    setTheme(next)
+  }
+  return { isDark, toggle }
+}

@@ -33,8 +33,9 @@ till app and its tooling, and never changes the database on its own.
 
 ## The till app
 
-`web/` is the iPad app: React, Vite, TypeScript and Tailwind, as the store app is, built from
-the design in `design_handoff_fishlips_pos` (the "Classical" look, fonts kept in the app).
+`web/` is the iPad app: React, Vite, TypeScript and Tailwind, as the store app is, and styled
+like it (the same colour tokens, Geist, light and dark), so the two read as one system. The
+screens follow `design_handoff_fishlips_pos` for layout and flow.
 
 ```bash
 cd web

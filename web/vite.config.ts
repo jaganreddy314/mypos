@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    // The till has to open with no connection: the app, its fonts and the menu photos are
+    // The till has to open with no connection: the app, its font and the menu photos are
     // all kept on the iPad. Database calls are never cached; orders wait in IndexedDB instead.
     VitePWA({
       registerType: 'autoUpdate',
@@ -22,8 +22,8 @@ export default defineConfig({
         scope: base,
         display: 'standalone',
         orientation: 'landscape',
-        background_color: '#f3f2f2',
-        theme_color: '#f8f4f4',
+        background_color: '#f6f7f9',
+        theme_color: '#ffffff',
         icons: [
           { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
           { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' },

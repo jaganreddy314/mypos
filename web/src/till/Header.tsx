@@ -1,20 +1,22 @@
 import { clockTime } from '../lib/dates'
 import type { SyncStatus } from '../lib/sync'
-import { Brand } from './ui'
-
-const navOn = 'border-accent bg-accent-100 text-accent-700'
-const navOff = 'border-transparent text-neutral-700 hover:bg-neutral-200'
+import { useTheme } from './hooks'
+import { GLYPH } from './glyphs'
+import { Icon } from './icons'
+import { BusinessTile, Pill, type PillTone } from './ui'
 
 /** What the status pill says: the connection, and whether orders are waiting on the iPad. */
-function syncLabel(status: SyncStatus, waiting: number): { text: string; live: boolean } {
-  if (status === 'offline') return { text: waiting ? `Offline · ${waiting} saved here` : 'Offline', live: false }
-  if (status === 'signin') return { text: `Sign in to send ${waiting}`, live: false }
-  if (status === 'error' && waiting) return { text: `${waiting} not sent`, live: false }
-  if (waiting) return { text: `Sending ${waiting}`, live: true }
-  return { text: 'Terminal online', live: true }
+function syncPill(status: SyncStatus, waiting: number): { text: string; tone: PillTone } {
+  if (status === 'offline') return { text: waiting ? `Offline · ${waiting} saved here` : 'Offline', tone: 'warn' }
+  if (status === 'signin') return { text: `Sign in to send ${waiting}`, tone: 'danger' }
+  if (status === 'error' && waiting) return { text: `${waiting} not sent`, tone: 'danger' }
+  if (waiting) return { text: `Sending ${waiting}`, tone: 'info' }
+  return { text: 'Online', tone: 'success' }
 }
 
-export function Header({ screen, onScreen, openCount, now, staff, sync, onSettings }: {
+export function Header({ business, device, screen, onScreen, openCount, now, staff, sync, onSettings }: {
+  business: string
+  device: string
   screen: 'order' | 'queue'
   onScreen: (s: 'order' | 'queue') => void
   openCount: number
@@ -23,32 +25,40 @@ export function Header({ screen, onScreen, openCount, now, staff, sync, onSettin
   sync: { status: SyncStatus; waiting: number }
   onSettings: () => void
 }) {
-  const pill = syncLabel(sync.status, sync.waiting)
+  const pill = syncPill(sync.status, sync.waiting)
+  const { isDark, toggle } = useTheme()
   return (
-    <header className="flex h-[68px] flex-none items-center gap-5 border-b border-divider bg-neutral-100 px-[22px]">
-      <button onClick={onSettings} className="-m-2 min-h-[44px] rounded-md p-2 text-left hover:bg-neutral-200" aria-label="Till settings">
-        <Brand />
-      </button>
-      <div className="h-[34px] w-px bg-divider" />
-      <nav className="flex gap-1">
-        <button onClick={() => onScreen('order')}
-          className={`min-h-[44px] rounded-md border px-5 font-heading text-base font-semibold ${screen === 'order' ? navOn : navOff}`}>
-          Order
-        </button>
-        <button onClick={() => onScreen('queue')}
-          className={`min-h-[44px] rounded-md border px-5 font-heading text-base font-semibold ${screen === 'queue' ? navOn : navOff}`}>
-          Open orders · {openCount}
-        </button>
-      </nav>
-      <div className="flex-1" />
-      <button onClick={onSettings} className="flex min-h-[34px] items-center gap-2.5 rounded-full border border-divider px-3 py-1.5 hover:bg-neutral-200">
-        <span className={`h-[7px] w-[7px] rounded-full ${pill.live ? 'animate-pulse-dot bg-accent' : 'bg-neutral-700'}`} />
-        <span className="text-[12px] uppercase tracking-[0.06em] text-neutral-700">{pill.text}</span>
-      </button>
-      <div className="text-right leading-[1.25]">
-        <div className="font-heading text-[17px]">{clockTime(now)}</div>
-        <div className="text-[11px] text-neutral-700">Shift: {staff}</div>
+    <header className="flex h-16 flex-none items-center gap-4 border-b border-line bg-surface px-4">
+      <div className="flex min-w-0 items-center gap-2.5">
+        <BusinessTile name={business} />
+        <div className="min-w-0">
+          <div className="truncate text-[15px] font-semibold leading-tight">{business}</div>
+          <div className="text-xs text-muted">Till · {device}</div>
+        </div>
       </div>
+      <div role="group" aria-label="Screen" className="seg seg-lg ml-2 w-[300px]">
+        <button type="button" aria-pressed={screen === 'order'} onClick={() => onScreen('order')}>Order</button>
+        <button type="button" aria-pressed={screen === 'queue'} onClick={() => onScreen('queue')}>
+          Open orders
+          {openCount > 0 && <span className="ml-1.5 rounded-full bg-accent px-1.5 py-px text-[11px] font-semibold text-accent-ink">{openCount}</span>}
+        </button>
+      </div>
+      <div className="flex-1" />
+      <button type="button" onClick={onSettings} className="rounded-full p-1" aria-label="Sending orders">
+        <Pill tone={pill.tone} pulse={pill.tone === 'success' || pill.tone === 'info'}>{pill.text}</Pill>
+      </button>
+      <div className="text-right leading-tight">
+        <div className="num text-[15px] font-semibold">{clockTime(now)}</div>
+        <div className="text-xs text-muted">{staff}</div>
+      </div>
+      <button type="button" onClick={toggle} aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
+        className="grid h-11 w-11 place-items-center rounded-[10px] border border-line bg-surface text-ink-2 hover:bg-surface-2">
+        <Icon size={17} stroke={2}>{isDark ? GLYPH.sun : GLYPH.moon}</Icon>
+      </button>
+      <button type="button" onClick={onSettings} aria-label="Till settings"
+        className="grid h-11 w-11 place-items-center rounded-[10px] border border-line bg-surface text-ink-2 hover:bg-surface-2">
+        <Icon size={18} stroke={2}>{GLYPH.settings}</Icon>
+      </button>
     </header>
   )
 }

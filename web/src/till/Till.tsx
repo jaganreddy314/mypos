@@ -72,7 +72,7 @@ export function Till({ settings }: { settings: Settings }) {
     return (
       <Notice title="The menu isn’t on this iPad yet">
         <p>The till needs to load the menu once while it’s online. {menuError}</p>
-        <button className="btn btn-accent mt-5 min-h-[52px] w-full text-[17px]"
+        <button type="button" className="btn btn-primary btn-lg mt-5 w-full"
           onClick={() => refreshMenu(settings.businessId).then(() => setMenuError(''), (e: Error) => setMenuError(e.message))}>
           Try again
         </button>
@@ -135,8 +135,10 @@ export function Till({ settings }: { settings: Settings }) {
 
   return (
     <>
-      <div className="relative flex h-full flex-col overflow-hidden bg-bg">
+      <div className="relative flex h-full flex-col overflow-hidden bg-page">
         <Header
+          business={settings.businessName}
+          device={settings.device}
           screen={screen}
           onScreen={setScreen}
           openCount={orders.filter((o) => o.status !== 'collected').length}
