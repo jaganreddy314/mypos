@@ -7,7 +7,7 @@ import { db, loadMenu } from '../lib/db'
 import { tradingDay } from '../lib/dates'
 import type { Item } from '../lib/menu'
 import { addLine, makeLine, questions, type Line, type Order, type OrderType, type Payment as Paid } from '../lib/order'
-import { nextOrderNumber, type Settings } from '../lib/settings'
+import { nextOrderNumber, saveSettings, type Settings } from '../lib/settings'
 import { refreshMenu, saveOrder, useSync } from '../lib/sync'
 import { Docket, type DocketKind } from './Docket'
 import { Header } from './Header'
@@ -68,14 +68,31 @@ export function Till({ settings }: { settings: Settings }) {
   }, [printing])
 
   if (menu === undefined) return null
-  if (menu === null) {
+  const reload = () => refreshMenu(settings.businessId).then(() => setMenuError(''), (e: Error) => setMenuError(e.message))
+  // A menu kept for another business (the till was switched) counts as no menu.
+  if (menu === null || menu.businessId !== settings.businessId) {
     return (
       <Notice title="The menu isn’t on this iPad yet">
         <p>The till needs to load the menu once while it’s online. {menuError}</p>
-        <button type="button" className="btn btn-primary btn-lg mt-5 w-full"
-          onClick={() => refreshMenu(settings.businessId).then(() => setMenuError(''), (e: Error) => setMenuError(e.message))}>
-          Try again
-        </button>
+        <button type="button" className="btn btn-primary btn-lg mt-5 w-full" onClick={reload}>Try again</button>
+      </Notice>
+    )
+  }
+  if (!menu.categories.length) {
+    return (
+      <Notice title={`${settings.businessName} has no menu`}>
+        <p>
+          This till is set up for <b>{settings.businessName}</b>, which has nothing on its menu. Load a menu in the store
+          app under Food → Menu, or use the till for a different business.
+        </p>
+        {menuError && <div role="alert" className="mt-3 rounded-lg border border-bad/40 bg-bad/10 px-3 py-2 text-sm text-bad">{menuError}</div>}
+        <div className="mt-5 grid grid-cols-2 gap-2">
+          <button type="button" className="btn btn-lg" onClick={reload}>Check again</button>
+          <button type="button" className="btn btn-primary btn-lg" disabled={sync.waiting > 0} onClick={() => saveSettings(null)}>
+            Choose business
+          </button>
+        </div>
+        {sync.waiting > 0 && <p className="mt-2 text-xs text-muted">{sync.waiting} orders are still waiting to be sent from this iPad.</p>}
       </Notice>
     )
   }
