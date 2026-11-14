@@ -13,6 +13,7 @@ menu is kept there, and the day's takings flow back into its sales, item sales a
 |---|---|
 | `businesses`, `business_users`, security groups | Fish Lips Samford is one business; the till signs in as one of its people |
 | The menu (`menu_*`, `modifier_*`, migration `022_menu.sql`) | Reads it whole with `menu_snapshot()` and keeps it on the iPad |
+| Till orders (`pos_orders`, `pos_order_lines`, `pos_payments`, migration `023_pos_orders.sql`) | Each order is saved on the iPad, then sent with `submit_pos_order()`, which is safe to repeat |
 | `sales_days` | Filled in when the day is closed: card and cash takings, no typing |
 | `item_sales` | Quantities sold, for items linked to a catalogue product |
 | `staff` | Who is serving, recorded on each order |
@@ -29,6 +30,34 @@ till app and its tooling, and never changes the database on its own.
 - **No switch-over date.** The till runs beside the current POS until it's trusted.
 - **Prices come from the website** (fishlipssamford.com.au) until the till takes over as the
   source. Cook options are free there (the design's +$9 for battered is out of date).
+
+## The till app
+
+`web/` is the iPad app: React, Vite, TypeScript and Tailwind, as the store app is, built from
+the design in `design_handoff_fishlips_pos` (the "Classical" look, fonts kept in the app).
+
+```bash
+cd web
+cp .env.example .env    # the store app's Supabase address and anon key
+npm install
+npm run dev             # http://localhost:5173
+npm test                # prices, option rules, GST and the queue
+npm run build           # dist/, installable on the iPad from Safari: Share → Add to Home Screen
+```
+
+- **Setting up an iPad:** sign in with a store app login whose group has the **Till** area, and
+  pick the business. The menu is loaded then and kept on the iPad; after that the till opens
+  straight into taking orders, online or not.
+- **No connection:** orders are saved on the iPad (IndexedDB) and sent when it's back. The
+  header pill says how many are waiting. Nothing is lost if the app is closed mid-order.
+- **Card:** key the amount into the Tyro terminal, then tap *Approved on Tyro*. **Cash** works
+  out change to the nearest 5 cents.
+- **Phone orders:** *Send to kitchen* makes the docket unpaid; it waits under *Open orders*
+  with a *Pay* button, and can't be handed over until it's paid.
+- **Settings** (tap the Fish Lips mark): this iPad's name, the card surcharge (0 unless the
+  till should add one; Tyro terminals usually add their own), loading the latest menu, and
+  orders not yet sent.
+- **Dockets** print through the iPad's print dialog for now (AirPrint), sized for an 80mm roll.
 
 ## Menu
 
@@ -52,14 +81,13 @@ Loading again updates prices and adds new items; nothing is removed or duplicate
 ## Plan
 
 1. **Menu in the store app** ✔ migration `022_menu.sql`, Food → Menu page, website import.
-2. **Till MVP** (this repo): the design in `design_handoff_fishlips_pos` built in React + Vite +
-   TypeScript + Tailwind, as the store app is. Order entry, options, cart, cash and "paid on
-   Tyro", open-orders queue, kitchen dockets. Works offline: menu cached, each order written to
-   the iPad first (IndexedDB) and sent with an idempotent `submit_pos_order` call when online.
-   Migration `023_pos_orders.sql` adds orders, lines, payments and shifts, plus a `pos` area.
+2. **Till MVP** ✔ `web/`: order entry, options (packs ask a question several times), cart,
+   cash and "paid on Tyro", open-orders queue, kitchen dockets and receipts, working offline.
+   Migration `023_pos_orders.sql` adds orders, lines and payments, plus a **Till** area.
 3. **Back office**: closing the day writes `sales_days` and `item_sales`, so the dashboard and
    food cost cover Fish Lips with no change.
 4. **Payments and printing**: Tyro iClient, network docket printer (Epson ePOS), refunds and
-   voids behind a manager PIN, discounts, split payment, end-of-shift cash-up.
+   voids behind a manager PIN, discounts, split payment, staff sign-in per shift, end-of-shift
+   cash-up.
 5. **Later**: recipes (menu item → stock used) for theoretical vs actual food cost, online and
    Uber orders arriving on the till, email receipts.
