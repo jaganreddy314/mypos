@@ -12,8 +12,8 @@ menu is kept there, and the day's takings flow back into its sales, item sales a
 | Lives in the store app's database | What the till does with it |
 |---|---|
 | `businesses`, `business_users`, security groups | Fish Lips Samford is one business; the till signs in as one of its people |
-| The menu (`menu_*`, `modifier_*`, migration `022_menu.sql`) | Reads it whole with `menu_snapshot()` and keeps it on the iPad |
-| Till orders (`pos_orders`, `pos_order_lines`, `pos_payments`, migration `023_pos_orders.sql`) | Each order is saved on the iPad, then sent with `submit_pos_order()`, which is safe to repeat |
+| The menu (`menu_*`, `modifier_*`, migration `023_menu.sql`) | Reads it whole with `menu_snapshot()` and keeps it on the iPad |
+| Till orders (`pos_orders`, `pos_order_lines`, `pos_payments`, migration `024_pos_orders.sql`) | Each order is saved on the iPad, then sent with `submit_pos_order()`, which is safe to repeat |
 | `sales_days` | Filled in when the day is closed: card and cash takings, no typing |
 | `item_sales` | Quantities sold, for items linked to a catalogue product |
 | `staff` | Who is serving, recorded on each order |
@@ -47,8 +47,7 @@ npm run build           # dist/, installable on the iPad from Safari: Share → 
 
 - **Live:** <https://jaganreddy314.github.io/mypos/>, published from `main` by
   `.github/workflows/deploy.yml` against the store app's production database (repo variables
-  `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`). It needs migrations 022 and 023 released
-  there first. On the iPad: open it in Safari, Share → Add to Home Screen.
+  `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`). On the iPad: open it in Safari, Share → Add to Home Screen.
 - **Setting up an iPad:** sign in with a store app login whose group has the **Till** area, and
   pick the business. The menu is loaded then and kept on the iPad; after that the till opens
   straight into taking orders, online or not.
@@ -84,10 +83,10 @@ Loading again updates prices and adds new items; nothing is removed or duplicate
 
 ## Plan
 
-1. **Menu in the store app** ✔ migration `022_menu.sql`, Food → Menu page, website import.
+1. **Menu in the store app** ✔ migration `023_menu.sql`, Food → Menu page, website import.
 2. **Till MVP** ✔ `web/`: order entry, options (packs ask a question several times), cart,
    cash and "paid on Tyro", open-orders queue, kitchen dockets and receipts, working offline.
-   Migration `023_pos_orders.sql` adds orders, lines and payments, plus a **Till** area.
+   Migration `024_pos_orders.sql` adds orders, lines and payments, plus a **Till** area.
 3. **Back office**: closing the day writes `sales_days` and `item_sales`, so the dashboard and
    food cost cover Fish Lips with no change.
 4. **Payments and printing**: Tyro iClient, network docket printer (Epson ePOS), refunds and

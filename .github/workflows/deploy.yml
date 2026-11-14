@@ -1,5 +1,4 @@
 # main -> GitHub Pages, against the store app's production database, as the store app does.
-# The till needs migrations 022 and 023 there; until they're released it can't load a menu.
 name: Deploy to GitHub Pages
 
 on:
