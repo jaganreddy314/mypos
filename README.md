@@ -45,6 +45,10 @@ npm test                # prices, option rules, GST and the queue
 npm run build           # dist/, installable on the iPad from Safari: Share → Add to Home Screen
 ```
 
+- **Live:** <https://jaganreddy314.github.io/mypos/>, published from `main` by
+  `.github/workflows/deploy.yml` against the store app's production database (repo variables
+  `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`). It needs migrations 022 and 023 released
+  there first. On the iPad: open it in Safari, Share → Add to Home Screen.
 - **Setting up an iPad:** sign in with a store app login whose group has the **Till** area, and
   pick the business. The menu is loaded then and kept on the iPad; after that the till opens
   straight into taking orders, online or not.
